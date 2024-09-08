@@ -19,6 +19,8 @@ class AuthApiService {
 
       AuthModel loginUserModel =
           AuthModel(token: data['token'], tokenType: data['token_type']);
-    } on Exception catch (e) {}
+    } on Exception catch (e) {
+      print(e);
+    }
   }
 }
