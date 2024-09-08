@@ -5,7 +5,7 @@ class AuthApiService {
   final String baseUrl = "https://api.codingarabic.online/api";
   Dio dio = Dio();
 
-  postData({
+  login({
     required String email,
     required String password,
   }) async {
@@ -17,10 +17,28 @@ class AuthApiService {
       Map<String, dynamic> jsonData = response.data;
       Map<String, dynamic> data = jsonData['data'];
 
-      AuthModel loginUserModel =
-          AuthModel(token: data['token'], tokenType: data['token_type']);
-    } on Exception catch (e) {
-      print(e);
-    }
+      AuthModel loginUserModel = AuthModel.fromJson(data);
+    } catch (e) {}
+  }
+
+
+  
+
+  register({
+    required String name,
+    required String email,
+    required String password,
+    required String passwordConfirm,
+  }) async {
+    try {
+      final response = await dio.post(
+        "$baseUrl/auth/register",
+        data: {"email": email, "password": password,"name":name,"password_confirmation":passwordConfirm },
+      );
+      dynamic jsonData = response.data;
+      // Map<String, dynamic> data = jsonData['data'];
+
+      AuthModel authModel = AuthModel.fromJson(jsonData['data']);
+    }  catch (e) {}
   }
 }
