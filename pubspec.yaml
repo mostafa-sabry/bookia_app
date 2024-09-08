@@ -28,12 +28,13 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bloc: ^8.1.4
   cupertino_icons: ^1.0.6
+  dio: ^5.7.0
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   persistent_bottom_nav_bar: ^6.2.1
-  dio: ^5.7.0
 
 dev_dependencies:
   flutter_lints: ^3.0.0
