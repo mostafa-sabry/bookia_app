@@ -1,8 +1,8 @@
-class LoginUserModel {
+class AuthModel {
   final String token;
   final String tokenType;
 
-  LoginUserModel({
+  AuthModel({
     required this.token,
     required this.tokenType,
   });
