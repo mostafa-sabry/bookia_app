@@ -1,4 +1,4 @@
-import 'package:bookia_store/consts/app_colors.dart';
+import 'package:bookia_store/const/app_colors.dart';
 import 'package:bookia_store/ui/widgets/text_widget_app.dart';
 import 'package:flutter/material.dart';
 

@@ -1,13 +1,13 @@
-import 'package:bookia_store/consts/app_colors.dart';
-import 'package:bookia_store/consts/my_validators.dart';
+import 'package:bookia_store/const/app_colors.dart';
+import 'package:bookia_store/const/my_validators.dart';
 import 'package:bookia_store/ui/screens/auth/register_screen.dart';
 import 'package:bookia_store/ui/screens/home_screen.dart';
 import 'package:bookia_store/ui/widgets/text_widget_app.dart';
 import 'package:flutter/material.dart';
 
-import '../../../consts/arrwo_back_widget.dart';
-import '../../../consts/data_return.dart';
-import '../../../consts/divider_widget.dart';
+import '../../../const/arrwo_back_widget.dart';
+import '../../../const/data_return.dart';
+import '../../../const/divider_widget.dart';
 import '../../widgets/custom_elevated_button_widget.dart';
 import '../../widgets/custom_social_login.dart';
 import '../../widgets/custom_text_from_field.dart';

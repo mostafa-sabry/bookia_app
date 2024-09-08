@@ -1,4 +1,4 @@
-import 'package:bookia_store/consts/app_colors.dart';
+import 'package:bookia_store/const/app_colors.dart';
 import 'package:bookia_store/core/api_services/get_all_book_services.dart';
 import 'package:bookia_store/models/book_model.dart';
 import 'package:bookia_store/ui/widgets/custom_shop_book_widget.dart';

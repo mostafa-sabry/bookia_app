@@ -1,4 +1,4 @@
-import 'package:bookia_store/consts/app_colors.dart';
+import 'package:bookia_store/const/app_colors.dart';
 import 'package:bookia_store/ui/screens/category_screen.dart';
 import 'package:bookia_store/ui/screens/home_screen.dart';
 import 'package:bookia_store/ui/screens/profile_screen.dart';
