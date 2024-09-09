@@ -14,15 +14,12 @@ class AuthApiService {
         "$baseUrl/auth/login",
         data: {"email": email, "password": password},
       );
-      Map<String, dynamic> jsonData = response.data;
+      dynamic jsonData = response.data;
       Map<String, dynamic> data = jsonData['data'];
 
       AuthModel loginUserModel = AuthModel.fromJson(data);
     } catch (e) {}
   }
-
-
-  
 
   register({
     required String name,
@@ -33,12 +30,17 @@ class AuthApiService {
     try {
       final response = await dio.post(
         "$baseUrl/auth/register",
-        data: {"email": email, "password": password,"name":name,"password_confirmation":passwordConfirm },
+        data: {
+          "email": email,
+          "password": password,
+          "name": name,
+          "password_confirmation": passwordConfirm
+        },
       );
       dynamic jsonData = response.data;
       // Map<String, dynamic> data = jsonData['data'];
 
       AuthModel authModel = AuthModel.fromJson(jsonData['data']);
-    }  catch (e) {}
+    } catch (e) {}
   }
 }
