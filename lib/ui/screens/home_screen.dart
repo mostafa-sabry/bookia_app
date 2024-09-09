@@ -60,18 +60,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         itemCount: books.length,
                         itemBuilder: (context, index) {
-                          return CustomShopBookWidget(
-                            book: books[index],
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => ProductDetailScreen(
-                                    productId: books[index].id,
+                                    productId: books[index].id ?? 1,
                                   ),
                                 ),
-                              );  
+                              );
                             },
+                            child: CustomShopBookWidget(
+                              book: books[index],
+                            ),
                           );
                         },
                       );

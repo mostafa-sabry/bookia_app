@@ -1,10 +1,10 @@
 class ProductBookModel {
-  final int id;
-  final String name;
-  final String category;
-  final String description;
-  final String image;
-  final double price;
+  final int? id;
+  final String? name;
+  final String? category;
+  final String? description;
+  final String? image;
+  final String? price;
 
   ProductBookModel({
     required this.id,
