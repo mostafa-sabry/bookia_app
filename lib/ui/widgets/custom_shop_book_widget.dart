@@ -21,8 +21,8 @@ class CustomShopBookWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SizedBox(
-              height: 110,
+            Container(
+              height: 100,
               child: Image.network(
                 book.image,
               ),
@@ -32,9 +32,6 @@ class CustomShopBookWidget extends StatelessWidget {
               color: AppColors.dark,
               fontSize: 16,
             ),
-            // const SizedBox(
-            //   height: 10,
-            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Row(

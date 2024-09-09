@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ArrwoBackWidget extends StatelessWidget {
-const  ArrwoBackWidget({super.key, required this.onPressed});
+  const ArrwoBackWidget({super.key, required this.onPressed});
 
-final  Function()? onPressed;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {

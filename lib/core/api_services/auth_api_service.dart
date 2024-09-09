@@ -1,4 +1,3 @@
-
 import 'package:bookia_store/models/login_user_model.dart';
 import 'package:dio/dio.dart';
 
@@ -6,7 +5,7 @@ class AuthApiService {
   final String baseUrl = "https://api.codingarabic.online/api";
   Dio dio = Dio();
 
- login({
+  login({
     required String email,
     required String password,
   }) async {
@@ -19,10 +18,7 @@ class AuthApiService {
 
       AuthModel authModel = AuthModel.fromJson(jsonData['data']);
       return authModel;
-
-    } on DioException catch (e) {
-
-    }
+    } on DioException catch (e) {}
   }
 
   register({

@@ -1,14 +1,21 @@
+import 'package:bookia_store/models/Product_book_model.dart';
 import 'package:dio/dio.dart';
 
 class AllShowBookServices {
   Dio dio = Dio();
 
-  Future<Map<String, dynamic>> getShowBook() async {
-    final response =
-        await dio.get("https://api.codingarabic.online/api/books/");
+  Future<ProductBookModel> getShowBook(int productId) async {
+    try {
+      final response =
+          await dio.get("https://api.codingarabic.online/api/books/$productId");
 
-    Map<String, dynamic> jsonData = response.data;
-
-    return jsonData;
+      if (response.statusCode == 200) {
+        return ProductBookModel.fromJson(response.data);
+      } else {
+        throw Exception('Failed to load product');
+      }
+    } catch (e) {
+      throw Exception('Error fetching product details: $e');
+    }
   }
 }
