@@ -27,11 +27,14 @@ class ProductDetailScreen extends StatelessWidget {
                   SvgPicture.asset("assets/svgs/bookmark.svg"),
                 ],
               ),
-             const SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               const Image(
                 image: AssetImage("assets/images/dec_book.png"),
+              ),
+              const SizedBox(
+                height: 12,
               ),
               TextWidgetApp(
                 title: "Black Heart",
@@ -43,23 +46,28 @@ class ProductDetailScreen extends StatelessWidget {
                 color: AppColors.primary,
                 fontSize: 15,
               ),
+              const SizedBox(
+                height: 22,
+              ),
               TextWidgetApp(
                 title: "Auteur: Margot Atwood",
                 color: AppColors.gray,
                 fontSize: 12,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextWidgetApp(
-                    title: r'$' '295',
-                    color: AppColors.gray,
-                    fontSize: 24,
-                  ),
-                  CustomButton(
-                    onTap: () {},
-                  ),
-                ],
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextWidgetApp(
+                      title: r'$' '295',
+                      color: AppColors.gray,
+                      fontSize: 24,
+                    ),
+                    CustomButton(
+                      onTap: () {},
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
