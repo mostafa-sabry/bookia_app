@@ -1,6 +1,7 @@
 import 'package:bookia_store/const/app_colors.dart';
 import 'package:bookia_store/core/api_services/get_all_book_services.dart';
 import 'package:bookia_store/models/book_model.dart';
+import 'package:bookia_store/ui/screens/product_detail_screen.dart';
 import 'package:bookia_store/ui/widgets/custom_shop_book_widget.dart';
 import 'package:bookia_store/ui/widgets/text_widget_app.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +62,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (context, index) {
                           return CustomShopBookWidget(
                             book: books[index],
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ProductDetailScreen(
+                                    productId: books[index].id,
+                                  ),
+                                ),
+                              );  
+                            },
                           );
                         },
                       );

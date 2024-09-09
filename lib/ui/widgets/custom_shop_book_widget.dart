@@ -5,9 +5,10 @@ import 'package:bookia_store/ui/widgets/text_widget_app.dart';
 import 'package:flutter/material.dart';
 
 class CustomShopBookWidget extends StatelessWidget {
-  const CustomShopBookWidget({super.key, required this.book});
+  CustomShopBookWidget({super.key, required this.book, required this.onTap});
 
   final BookModel book;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class CustomShopBookWidget extends StatelessWidget {
               ),
             ),
             TextWidgetApp(
-              title: book.title,
+              title: book.name,
               color: AppColors.dark,
               fontSize: 16,
             ),

@@ -1,19 +1,28 @@
 class BookModel {
-  final String title;
-  final String price;
+  final int id;
+  final String name;
+  final String category;
+  final String description;
   final String image;
+  final double price;
 
   BookModel({
-    required this.title,
+    required this.id,
+    required this.name,
+    required this.category,
+    required this.description,
     required this.price,
     required this.image,
   });
 
-  factory BookModel.fromJson(Map<String, dynamic> jsonData) {
+  factory BookModel.fromJson(Map<String, dynamic> json) {
     return BookModel(
-      title: jsonData['title'],
-      price: jsonData['price'],
-      image: jsonData['image'],
+      id: json['id'],
+      name: json['name'],
+      description: json['description'],
+      price: json['price'],
+      image: json['image'],
+      category: json['category'],
     );
   }
 }

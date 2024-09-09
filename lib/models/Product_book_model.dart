@@ -1,6 +1,7 @@
 class ProductBookModel {
   final int id;
   final String name;
+  final String category;
   final String description;
   final String image;
   final double price;
@@ -8,6 +9,7 @@ class ProductBookModel {
   ProductBookModel({
     required this.id,
     required this.name,
+    required this.category,
     required this.description,
     required this.price,
     required this.image,
@@ -20,6 +22,7 @@ class ProductBookModel {
       description: json['description'],
       price: json['price'],
       image: json['image'],
+      category: json['category'],
     );
   }
 }
