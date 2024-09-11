@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookia_store/core/api/api_service.dart';
+import 'package:bookia_store/core/api/end_point.dart';
+import 'package:bookia_store/core/errors/exception.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
@@ -27,4 +29,20 @@ class AuthCubit extends Cubit<AuthState> {
   TextEditingController registerPassword = TextEditingController();
   // confirm password
   TextEditingController cofirmPassword = TextEditingController();
+
+  login() async {
+    try {
+      emit(LoginLoading());
+      final response = await api.post(
+        EndPoint.logIn,
+        data: {
+          ApiKey.email: emailController.text,
+          ApiKey.password: passwordController,
+        },
+      );
+      emit(LogInSuccess());
+    } on serverException catch (e) {
+      emit(LoginError(errorMessage: e.errorModel.message));
+    }
+  }
 }
