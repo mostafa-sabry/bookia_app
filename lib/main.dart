@@ -1,4 +1,4 @@
-import 'package:bookia_store/ui/nav_bar/bottom_nav_bar.dart';
+import 'package:bookia_store/ui/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavBar(),
+      home: WelcomeScreen(),
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:bookia_store/const/app_colors.dart';
 import 'package:bookia_store/const/my_validators.dart';
 import 'package:bookia_store/ui/screens/auth/register_screen.dart';
-import 'package:bookia_store/ui/screens/home_screen.dart';
 import 'package:bookia_store/ui/widgets/text_widget_app.dart';
 import 'package:flutter/material.dart';
 
@@ -128,10 +127,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: AppColors.primary,
                   colorSubTitle: AppColors.border,
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return const HomeScreen();
-                    }));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) {
+                    //   return const HomeScreen();
+                    // },),);
                   },
                 ),
                 const SizedBox(
