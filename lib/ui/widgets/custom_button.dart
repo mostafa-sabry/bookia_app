@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../../const/app_colors.dart';
-
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     this.onTap,
+    required this.title,
+    required this.color,
+    required this.background,
   });
   final Function()? onTap;
+  final String title;
+  final Color color;
+  final Color background;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +21,13 @@ class CustomButton extends StatelessWidget {
         height: 40,
         width: 72,
         decoration: BoxDecoration(
-          color: AppColors.dark,
+          color: background,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Buy Now',
-            style: TextStyle(color: Colors.white),
+            title,
+            style: TextStyle(color: color),
           ),
         ),
       ),

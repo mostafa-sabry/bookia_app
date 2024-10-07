@@ -1,10 +1,9 @@
 import 'package:bookia_store/const/app_colors.dart';
-import 'package:bookia_store/ui/screens/auth/login.dart';
-import 'package:bookia_store/ui/screens/auth/register_screen.dart';
+import 'package:bookia_store/ui/screens/auth/login_view.dart';
+import 'package:bookia_store/ui/screens/auth/register_view.dart';
+import 'package:bookia_store/ui/widgets/custom_button_welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../widgets/custom_elevated_button_widget.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -50,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const LoginScreen(),
+                          builder: (context) => LoginView(),
                         ),
                       );
                     },
@@ -66,7 +65,7 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const RegisterScreen(),
+                          builder: (context) => RegisterView(),
                         ),
                       );
                     },

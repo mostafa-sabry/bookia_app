@@ -1,12 +1,12 @@
 import 'package:bookia_store/const/app_colors.dart';
-import 'package:bookia_store/ui/screens/category_screen.dart';
 import 'package:bookia_store/ui/screens/home_screen.dart';
-import 'package:bookia_store/ui/screens/profile_screen.dart';
+import 'package:bookia_store/ui/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../screens/book_mark_screen..dart';
+import '../screens/category_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -26,8 +26,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> screens = [
     const HomeScreen(),
-    const BookMarkScreen(),
-    const CategoryScreen(),
+    const WishListScreen(),
+    const CartScreen(),
     const ProfileScreen(),
   ];
 
@@ -47,13 +47,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
         PersistentBottomNavBarItem(
           icon: SvgPicture.asset('assets/svgs/bookmark.svg'),
-          title: 'Book',
-          activeColorPrimary: AppColors.primary,
+          title: 'Wish',
+          activeColorPrimary: AppColors.dark,
           inactiveColorPrimary: AppColors.gray,
         ),
         PersistentBottomNavBarItem(
           icon: SvgPicture.asset('assets/svgs/category.svg'),
-          title: 'Category',
+          title: 'Cart',
           activeColorPrimary: AppColors.primary,
           inactiveColorPrimary: AppColors.gray,
         ),

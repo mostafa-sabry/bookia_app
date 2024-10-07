@@ -1,8 +1,5 @@
-import 'package:bookia_store/ui/widgets/custom_elevated_button_widget.dart';
 import 'package:bookia_store/ui/widgets/text_widget_app.dart';
 import 'package:flutter/material.dart';
-
-import '../../const/app_colors.dart';
 
 class HederCustomWidget extends StatelessWidget {
   const HederCustomWidget({
@@ -36,17 +33,6 @@ class HederCustomWidget extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          bottom: 30,
-          right: 190,
-          left: 50,
-          child: CustomElevatedButtonWidget(
-            title: 'Explore',
-            color: AppColors.background,
-            colorSubTitle: AppColors.primary,
-            onPressed: () {},
-          ),
-        )
       ],
     );
   }

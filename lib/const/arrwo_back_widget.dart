@@ -11,6 +11,7 @@ class ArrwoBackWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        // alignment: Alignment.bottomRight  ,
         height: 41,
         width: 41,
         margin: const EdgeInsets.symmetric(vertical: 30),

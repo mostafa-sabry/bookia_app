@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomElevatedButtonWidget extends StatelessWidget {
-  CustomElevatedButtonWidget({
+  const CustomElevatedButtonWidget({
     super.key,
     required this.title,
     required this.color,
@@ -16,7 +15,7 @@ class CustomElevatedButtonWidget extends StatelessWidget {
   final Color colorSubTitle;
   final fontWeight = 'DMSerifDisplay';
   final double fontSize;
-  Function()? onPressed;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {

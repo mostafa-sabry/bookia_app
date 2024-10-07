@@ -7,11 +7,15 @@ class DividerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 22),
-      child: SizedBox(
-        width: 95,
-        child: Divider(
-          thickness: 2,
-        ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 110,
+            child: Divider(
+              thickness: 1,
+            ),
+          ),
+        ],
       ),
     );
   }
