@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "254604799297",
+    "project_id": "bookia-eda59",
+    "storage_bucket": "bookia-eda59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254604799297:android:043ca6a5d9f6852c3dc5c0",
+        "android_client_info": {
+          "package_name": "com.example.bookia_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmYSYTXCSNCTB1UfN9qDOz3h9BgUy9OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
